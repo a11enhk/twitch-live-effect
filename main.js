@@ -51,7 +51,7 @@ function listen(topic) {
         nonce: nonce(15),
         data: {
             topics: [topic],
-            auth_token: sessionStorage.twitchOAuthToken
+            auth_token: accessToken
         }
     };
     $('.ws-output').append('SENT: ' + JSON.stringify(message) + '\n');
