@@ -52,7 +52,7 @@ function vsConnect() {
         setTimeout(() => {
             send('AuthenticationRequest', {
                 pluginName: 'My Cool Plugin',
-                pluginDeveloper: 'Me',
+                pluginDeveloper: 'My Name',
                 authenticationToken: authenticationToken,
             })
         }, 3000);
@@ -81,7 +81,7 @@ function vsConnect() {
     
     vsWs.onerror = function(err) {
         console.error('Socket encountered error: ', err.message, 'Closing socket');
-        ws.close();
+        vsWs.close();
     };
 
 }
